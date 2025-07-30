@@ -25,24 +25,24 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         
         <div className="flex-1 flex flex-col">
           {/* Header */}
-          <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="flex h-16 items-center gap-4 px-6">
-              <SidebarTrigger className="lg:hidden" />
+          <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-soft">
+            <div className="flex h-16 items-center gap-4 px-4 md:px-6">
+              <SidebarTrigger className="md:hidden hover:bg-muted transition-colors duration-200" />
               
               <div className="flex-1 flex items-center gap-4">
-                <div className="relative max-w-md flex-1">
+                <div className="relative max-w-md flex-1 hidden sm:block">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input
                     placeholder="Search projects, team members..."
-                    className="pl-10 bg-muted/50 border-border"
+                    className="pl-10 bg-muted/50 border-border transition-all duration-200 focus:bg-background"
                   />
                 </div>
               </div>
 
               <div className="flex items-center gap-2">
-                <Button variant="ghost" size="icon" className="relative">
+                <Button variant="ghost" size="icon" className="relative hover:bg-muted transition-colors duration-200">
                   <Bell className="h-4 w-4" />
-                  <span className="absolute -top-1 -right-1 h-2 w-2 bg-primary rounded-full"></span>
+                  <span className="absolute -top-1 -right-1 h-2 w-2 bg-primary rounded-full animate-pulse"></span>
                 </Button>
 
                 <DropdownMenu>
@@ -82,8 +82,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </header>
 
           {/* Main Content */}
-          <main className="flex-1 p-6">
-            {children}
+          <main className="flex-1 p-4 md:p-6 overflow-auto">
+            <div className="max-w-7xl mx-auto">
+              {children}
+            </div>
           </main>
         </div>
       </div>

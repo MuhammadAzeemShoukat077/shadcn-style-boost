@@ -68,14 +68,14 @@ const secondaryItems = [
 
 export function AppSidebar() {
   return (
-    <Sidebar className="border-r border-border bg-card">
-      <SidebarHeader className="border-b border-border p-6">
+    <Sidebar className="border-r border-sidebar-border bg-sidebar shadow-soft">
+      <SidebarHeader className="border-b border-sidebar-border p-6">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">A</span>
+          <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow">
+            <span className="text-primary-foreground font-bold text-lg">A</span>
           </div>
           <div>
-            <h2 className="text-lg font-semibold text-foreground">Acme Corp</h2>
+            <h2 className="text-lg font-bold text-sidebar-foreground">Acme Corp</h2>
             <p className="text-xs text-muted-foreground">Business Suite</p>
           </div>
         </div>
@@ -95,15 +95,15 @@ export function AppSidebar() {
                       to={item.url}
                       end
                       className={({ isActive }) =>
-                        `flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 ${
+                        `flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-300 group ${
                           isActive
-                            ? "bg-primary text-primary-foreground shadow-elegant"
-                            : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                            ? "bg-gradient-primary text-primary-foreground shadow-elegant shadow-glow"
+                            : "text-sidebar-foreground hover:text-sidebar-foreground hover:bg-sidebar-accent"
                         }`
                       }
                     >
-                      <item.icon className="h-4 w-4" />
-                      <span>{item.title}</span>
+                      <item.icon className="h-5 w-5 transition-transform group-hover:scale-110" />
+                      <span className="font-medium">{item.title}</span>
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -121,10 +121,10 @@ export function AppSidebar() {
               <Button 
                 variant="outline" 
                 size="sm" 
-                className="w-full justify-start gap-2 border-border hover:bg-accent"
+                className="w-full justify-start gap-3 py-3 border-sidebar-border bg-gradient-accent hover:bg-sidebar-accent text-sidebar-foreground transition-all duration-200 hover:shadow-soft"
               >
                 <Bell className="h-4 w-4" />
-                Notifications
+                <span className="font-medium">Notifications</span>
               </Button>
             </div>
           </SidebarGroupContent>
@@ -138,16 +138,16 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild className="w-full">
                     <NavLink
                       to={item.url}
-                      className={({ isActive }) =>
-                        `flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 ${
-                          isActive
-                            ? "bg-primary text-primary-foreground"
-                            : "text-muted-foreground hover:text-foreground hover:bg-accent"
-                        }`
-                      }
+                        className={({ isActive }) =>
+                          `flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-300 group ${
+                            isActive
+                              ? "bg-gradient-primary text-primary-foreground shadow-elegant"
+                              : "text-sidebar-foreground hover:text-sidebar-foreground hover:bg-sidebar-accent"
+                          }`
+                        }
                     >
-                      <item.icon className="h-4 w-4" />
-                      <span>{item.title}</span>
+                      <item.icon className="h-5 w-5 transition-transform group-hover:scale-110" />
+                      <span className="font-medium">{item.title}</span>
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -157,14 +157,14 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="border-t border-border p-4">
-        <div className="flex items-center gap-3 p-2 rounded-lg bg-muted/50">
-          <Avatar className="h-8 w-8">
+      <SidebarFooter className="border-t border-sidebar-border p-4">
+        <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-accent border border-sidebar-border hover:bg-sidebar-accent transition-all duration-200 cursor-pointer">
+          <Avatar className="h-10 w-10 ring-2 ring-primary/20">
             <AvatarImage src="/placeholder-user.jpg" />
-            <AvatarFallback className="bg-primary text-primary-foreground">JD</AvatarFallback>
+            <AvatarFallback className="bg-gradient-primary text-primary-foreground font-bold">JD</AvatarFallback>
           </Avatar>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-foreground truncate">John Doe</p>
+            <p className="text-sm font-bold text-sidebar-foreground truncate">John Doe</p>
             <p className="text-xs text-muted-foreground truncate">john@acmecorp.com</p>
           </div>
         </div>
