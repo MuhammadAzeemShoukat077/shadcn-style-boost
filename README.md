@@ -2,10 +2,9 @@
 
 ## Project info
 
+This is a modern React-based frontend project using `shadcn/ui`, `Tailwind CSS`, and `TypeScript`. It features a sidebar layout with full routing support via `react-router-dom`. The sidebar includes active and hover states, dark/light theme compatibility, and elegant UI components.
 
 ## How can I edit this code?
-
-
 
 Follow these steps:
 
@@ -21,18 +20,3 @@ npm i
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
-```
-
-
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-
