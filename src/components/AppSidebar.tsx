@@ -97,8 +97,8 @@ export function AppSidebar() {
                       className={({ isActive }) =>
                         `flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-300 group ${
                           isActive
-                            ? "bg-gradient-primary text-primary-foreground shadow-elegant shadow-glow"
-                            : "text-sidebar-foreground hover:text-sidebar-foreground hover:bg-sidebar-accent"
+                            ? "bg-gradient-primary  shadow-elegant shadow-glow"
+                            : "text-sidebar-foreground bg-transparent hover:bg-sidebar-accent"
                         }`
                       }
                     >
@@ -138,13 +138,13 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild className="w-full">
                     <NavLink
                       to={item.url}
-                        className={({ isActive }) =>
-                          `flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-300 group ${
-                            isActive
-                              ? "bg-gradient-primary text-primary-foreground shadow-elegant"
-                              : "text-sidebar-foreground hover:text-sidebar-foreground hover:bg-sidebar-accent"
-                          }`
-                        }
+                      className={({ isActive }) =>
+                        `flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-300 group ${
+                          isActive
+                            ? "bg-gradient-primary  shadow-elegant"
+                            : "text-sidebar-foreground bg-transparent hover:bg-sidebar-accent"
+                        }`
+                      }
                     >
                       <item.icon className="h-5 w-5 transition-transform group-hover:scale-110" />
                       <span className="font-medium">{item.title}</span>

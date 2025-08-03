@@ -125,7 +125,7 @@ export default function Help() {
       {/* Header */}
       <div className="text-center space-y-4">
         <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
-          <HelpCircle className="h-8 w-8 text-primary-foreground" />
+          <HelpCircle className="h-8 w-8" />
         </div>
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Help & Support</h1>
@@ -224,7 +224,7 @@ export default function Help() {
                 <CardHeader>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                      <topic.icon className="h-5 w-5 text-primary-foreground" />
+                      <topic.icon className="h-5 w-5 " />
                     </div>
                     <div>
                       <CardTitle className="text-base">{topic.title}</CardTitle>

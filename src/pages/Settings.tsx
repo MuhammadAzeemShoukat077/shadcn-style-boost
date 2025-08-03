@@ -86,7 +86,7 @@ export default function Settings() {
               <div className="flex items-center gap-6">
                 <Avatar className="h-20 w-20">
                   <AvatarImage src="/placeholder-user.jpg" />
-                  <AvatarFallback className="bg-primary text-primary-foreground text-lg">JD</AvatarFallback>
+                  <AvatarFallback className="bg-primary text-lg">JD</AvatarFallback>
                 </Avatar>
                 <div className="space-y-2">
                   <Button variant="outline" className="gap-2">
