@@ -1,6 +1,7 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "./AppSidebar";
 import { ThemeToggle } from "./ThemeToggle";
+import { BreadcrumbNav } from "./BreadcrumbNav";
 import { Button } from "@/components/ui/button";
 import { Bell, Search, User } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -85,7 +86,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
           {/* Main Content */}
           <main className="flex-1 p-4 md:p-6 overflow-auto">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto space-y-6">
+              <BreadcrumbNav />
               {children}
             </div>
           </main>

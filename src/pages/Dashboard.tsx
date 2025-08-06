@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { SamplePopups } from "@/components/SamplePopups";
 import { 
   TrendingUp, 
   TrendingDown, 
@@ -265,6 +266,50 @@ export default function Dashboard() {
               <span>Support</span>
             </Button>
           </div>
+        </CardContent>
+      </Card>
+
+      {/* Template Features Demo */}
+      <Card className="border-border bg-card">
+        <CardHeader>
+          <CardTitle className="text-foreground">Template Features Showcase</CardTitle>
+          <CardDescription>
+            All the components your client requested - ready for Next.js conversion
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-6">
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 border border-border">
+              <CheckCircle className="h-8 w-8 text-emerald-500" />
+              <div>
+                <h4 className="font-medium text-foreground">Data Tables ✓</h4>
+                <p className="text-sm text-muted-foreground">Check Projects page</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 border border-border">
+              <CheckCircle className="h-8 w-8 text-emerald-500" />
+              <div>
+                <h4 className="font-medium text-foreground">Side Menu ✓</h4>
+                <p className="text-sm text-muted-foreground">Responsive & themed</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 border border-border">
+              <CheckCircle className="h-8 w-8 text-emerald-500" />
+              <div>
+                <h4 className="font-medium text-foreground">Popups ✓</h4>
+                <p className="text-sm text-muted-foreground">See below demo</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 border border-border">
+              <CheckCircle className="h-8 w-8 text-emerald-500" />
+              <div>
+                <h4 className="font-medium text-foreground">Breadcrumb ✓</h4>
+                <p className="text-sm text-muted-foreground">Above this content</p>
+              </div>
+            </div>
+          </div>
+          
+          <SamplePopups />
         </CardContent>
       </Card>
     </div>
